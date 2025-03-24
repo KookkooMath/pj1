@@ -12,7 +12,7 @@
     <style>
         body {
             font-family: 'Noto Sans Thai', sans-serif;
-            background: linear-gradient(90deg, #f57c00, #ffffff);
+            background: linear-gradient(180deg, #f57c00, #ffffff);
             padding: 0;
             margin: 0;
             display: flex;
@@ -21,21 +21,23 @@
             align-items: center;
             min-height: 100vh;
         }
+
         /* สไตล์ของแถบด้านบน */
         .top-bar {
             display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background: linear-gradient(90deg, #f57c00, #ff9800);
-	padding: 15px 30px;
-	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-	position: fixed;
-	width: 100%;
-	top: 0;
-	z-index: 1000;
-	transition: all 0.3s ease-in-out;
-    height: 4%;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(90deg, #f57c00, #ff9800);
+            padding: 15px 30px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease-in-out;
+            height: 4%;
         }
+
         .login-box {
             margin-top: -10px;
             width: 100%;
@@ -48,14 +50,15 @@
             animation: loginFadeIn 0.5s ease;
             padding-top: 30px;
             border: 3px groove #000000;
-}
+        }
+
         /* เพิ่มพื้นที่เผื่อด้านบนสำหรับเนื้อหา */
         .content {
             margin-top: 10px;
             text-align: center;
             color: #ffffff;
             font-size: 30px;
-            text-shadow: black 0px 0px 3px;    
+            text-shadow: black 0px 0px 3px;
         }
 
         /* สไตล์ของฟอร์ม */
@@ -74,7 +77,7 @@
             font-family: 'Noto Sans Thai', sans-serif;
             border-radius: 18px;
         }
-        
+
         input[type="submit"] {
             padding: 15px 25px;
             background: linear-gradient(90deg, #f57c00, #ff9800);
@@ -84,12 +87,12 @@
             cursor: pointer;
             font-family: 'Noto Sans Thai', sans-serif;
             font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    background: linear-gradient(90deg, #ff9800, #f57c00);
-    width: 130px;
-    height: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            background: linear-gradient(90deg, #ff9800, #f57c00);
+            width: 130px;
+            height: 50px;
         }
 
         input[type="submit"]:hover {
@@ -112,24 +115,28 @@
         .forgot-password a:hover {
             text-decoration: underline;
         }
+
         .button-container {
-    display: flex;
-    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
-    justify-content: center; /* จัดตรงกลาง */
-    align-items: center; /* แก้ไขการเลื่อมของปุ่ม */
-}
+            display: flex;
+            gap: 10px;
+            /* ระยะห่างระหว่างปุ่ม */
+            justify-content: center;
+            /* จัดตรงกลาง */
+            align-items: center;
+            /* แก้ไขการเลื่อมของปุ่ม */
+        }
 
-.button-container form {
-    margin: 0;
-    padding: 0;
-}
+        .button-container form {
+            margin: 0;
+            padding: 0;
+        }
 
-.button-container input[type="submit"] {
-    padding: 10px 20px;
-    font-size: 16px;
-    width: 150px; /* กำหนดให้ปุ่มเท่ากัน */
-}
-
+        .button-container input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            width: 150px;
+            /* กำหนดให้ปุ่มเท่ากัน */
+        }
     </style>
 </head>
 
@@ -141,17 +148,15 @@
     <div class="content">
         <h1>P H A K M A T H</h1>
     </div>
-    
+
     <div class="login-box">
         <!-- ฟอร์มล็อกอิน -->
         <form action="Login.php" method="post">
             <input type="text" id="UserID" name="UserID" placeholder="ชื่อบัญชีผู้ใช้" required><br>
             <input type="password" id="Password" name="Password" placeholder="รหัสผ่าน" required><br>
-            </form>
             <div class="button-container">
-                <form action="Login.php" method="post">
-                    <input type="submit" value="เข้าสู่ระบบ">
-                </form>
+                <input type="submit" value="เข้าสู่ระบบ">
+            </form>
                 <form action="Register.html">
                     <input type="submit" value="ลงทะเบียน">
                 </form>
@@ -159,7 +164,8 @@
         <div class="forgot-password">
             <a href="ResetPassword.php">ลืมรหัสผ่าน</a>
         </div>
-    
+    </div>
+
     </div>
 
 
