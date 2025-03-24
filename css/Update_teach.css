@@ -9,7 +9,8 @@ body {
 }
 
 .top-bar {
-    background-color: #150B6E;
+    background-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
     height: 60px;
     width: 100%;
     position: fixed;
@@ -46,7 +47,8 @@ body {
 }
 
 h2 {
-    color: #150B6E;
+    color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
     text-align: center;
     margin-bottom: 2rem;
     font-size: 1.5rem;
@@ -63,12 +65,14 @@ h2 {
 }
 
 .form-section h3 {
-    color: #150B6E;
+    color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
     margin-top: 0;
     margin-bottom: 1.5rem;
     font-size: 1.25rem;
     font-weight: 600;
-    border-bottom: 2px solid #150B6E;
+    border-bottom: 2px solid #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
     padding-bottom: 0.75rem;
 }
 
@@ -87,7 +91,6 @@ h2 {
     flex: 1;
     min-width: 250px;
     position: relative;
-
 }
 
 .form-group label {
@@ -110,8 +113,10 @@ h2 {
 
 .form-group input:focus,
 .form-group select:focus {
-    border-color: #150B6E;
-    box-shadow: 0 0 0 3px rgba(21, 11, 110, 0.15);
+    border-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    box-shadow: 0 0 0 3px rgba(245, 124, 0, 0.15);
+    /* ปรับ rgba ให้เข้ากับสีส้ม */
     outline: none;
 }
 
@@ -158,8 +163,10 @@ input[type="time"]::-webkit-datetime-edit {
 }
 
 input[type="time"]:focus {
-    border-color: #150B6E;
-    box-shadow: 0 0 0 3px rgba(21, 11, 110, 0.15);
+    border-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    box-shadow: 0 0 0 3px rgba(245, 124, 0, 0.15);
+    /* ปรับ rgba ให้เข้ากับสีส้ม */
     outline: none;
 }
 
@@ -182,7 +189,8 @@ input[type="time"]::placeholder {
 .time-group h4 {
     margin-top: 0;
     margin-bottom: 1rem;
-    color: #150B6E;
+    color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
     font-size: 1rem;
     font-weight: 600;
 }
@@ -236,7 +244,8 @@ input[type="time"]::placeholder {
     width: 18px;
     height: 18px;
     margin-right: 10px;
-    accent-color: #150B6E;
+    accent-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
 }
 
 .hours-input {
@@ -282,7 +291,8 @@ input[type="time"]::placeholder {
     width: 18px;
     height: 18px;
     margin-right: 10px;
-    accent-color: #150B6E;
+    accent-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
 }
 
 .weeks-container {
@@ -309,13 +319,17 @@ input[type="time"]::placeholder {
 }
 
 .week-item:hover {
-    border-color: #150B6E;
-    background-color: #f8f6ff;
+    border-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    background-color: #fff3e0;
+    /* สีส้มอ่อนสำหรับ hover */
 }
 
 .week-item.selected {
-    background-color: #150B6E;
-    border-color: #150B6E;
+    background-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    border-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
     color: white;
 }
 
@@ -332,7 +346,8 @@ input[type="time"]::placeholder {
 }
 
 .week-item.first-week {
-    border: 1px solid #150B6E;
+    border: 1px solid #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
 }
 
 .form-actions {
@@ -342,7 +357,8 @@ input[type="time"]::placeholder {
 }
 
 .submit-button {
-    background-color: #150B6E;
+    background-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
     color: white;
     padding: 0.75rem 2rem;
     border: none;
@@ -351,31 +367,40 @@ input[type="time"]::placeholder {
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: 'Noto Sans Thai', sans-serif;
-    box-shadow: 0 4px 6px rgba(21, 11, 110, 0.2);
+    box-shadow: 0 4px 6px rgba(245, 124, 0, 0.2);
+    /* ปรับ rgba ให้เข้ากับสีส้ม */
 }
 
 .submit-button:hover {
-    background-color: #221293;
+    background-color: #ff9800;
+    /* เปลี่ยนเป็นสีส้มสว่าง */
     transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(21, 11, 110, 0.25);
+    box-shadow: 0 6px 8px rgba(245, 124, 0, 0.25);
+    /* ปรับ rgba ให้เข้ากับสีส้ม */
 }
 
 .submit-button:active {
     transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(21, 11, 110, 0.2);
+    box-shadow: 0 2px 4px rgba(245, 124, 0, 0.2);
+    /* ปรับ rgba ให้เข้ากับสีส้ม */
 }
 
 .form-control:focus,
 .form-select:focus {
-    border-color: #150B6E;
-    box-shadow: 0 0 0 0.25rem rgba(21, 11, 110, 0.25);
+    border-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    box-shadow: 0 0 0 0.25rem rgba(245, 124, 0, 0.25);
+    /* ปรับ rgba ให้เข้ากับสีส้ม */
 }
 
 .form-check-input:checked {
-    background-color: #150B6E;
-    border-color: #150B6E;
+    background-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    border-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
 }
 
+/* Media Queries คงไว้เหมือนเดิม */
 @media (max-width: 768px) {
     .form-row {
         flex-direction: column;

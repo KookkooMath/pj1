@@ -92,7 +92,6 @@
 
     $conn->close();
 
-    // ทำให้แน่ใจว่าตัวแปรที่ใช้มีค่าเสมอ
     $data['Hours_per_week_bachelor_degree'] = isset($data['Hours_per_week_bachelor_degree']) ? $data['Hours_per_week_bachelor_degree'] : 0;
     $data['Hours_per_week_inter_bachelor_degree'] = isset($data['Hours_per_week_inter_bachelor_degree']) ? $data['Hours_per_week_inter_bachelor_degree'] : 0;
     $data['Hours_per_week_graduate'] = isset($data['Hours_per_week_graduate']) ? $data['Hours_per_week_graduate'] : 0;

@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // ฟอร์มส่งข้อมูล
   const form = document.querySelector("form");
   form.addEventListener("submit", function (event) {
-    event.preventDefault(); // ป้องกันการส่งฟอร์มแบบปกติ
+    event.preventDefault(); 
 
     const formData = new FormData(this);
 

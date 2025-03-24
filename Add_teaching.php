@@ -24,7 +24,7 @@
 
     <?php
     include 'phak_math.php';
-
+    // ทำให้แน่ใจว่าตัวแปรที่ใช้มีค่าเสมอ
     $year = isset($_GET['Year']) ? $_GET['Year'] : '';
     $term = isset($_GET['Term']) ? $_GET['Term'] : '';
     $course_day = isset($_GET['Course_day']) ? $_GET['Course_day'] : '';
