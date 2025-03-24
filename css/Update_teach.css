@@ -1,0 +1,507 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
+
+body {
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+.top-bar {
+    background-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.back-link {
+    margin-left: 20px;
+}
+
+.back-icon img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 90px auto 40px;
+    padding: 0 20px;
+}
+
+.form-container {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+h2 {
+    color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.form-section {
+    margin-bottom: 2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    background-color: #fafafa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.form-section h3 {
+    color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-bottom: 2px solid #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    padding-bottom: 0.75rem;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label[for="Amount_teach_hours_per_term"] {
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    box-shadow: 0 0 0 3px rgba(245, 124, 0, 0.15);
+    /* ปรับ rgba ให้เข้ากับสีส้ม */
+    outline: none;
+}
+
+.form-group input[readonly] {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+input[type="time"] {
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px;
+    padding-right: 2.5rem;
+    position: relative;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+input[type="time"]::-webkit-datetime-edit {
+    width: calc(100% - 2.5rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+input[type="time"]:focus {
+    border-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    box-shadow: 0 0 0 3px rgba(245, 124, 0, 0.15);
+    /* ปรับ rgba ให้เข้ากับสีส้ม */
+    outline: none;
+}
+
+input[type="time"]::placeholder {
+    color: #999;
+}
+
+.time-group {
+    flex: 1;
+    min-width: 200px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.time-group h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.time-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.time-inputs .form-group {
+    flex: 1;
+    min-width: 120px;
+}
+
+.hours-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hour-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    flex: 1;
+    min-width: 300px;
+}
+
+.hour-group-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.checkbox-input {
+    display: flex;
+    align-items: center;
+    min-width: 150px;
+}
+
+.checkbox-input input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    accent-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+}
+
+.hours-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hours-input input[type="number"] {
+    width: 70px;
+    text-align: center;
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.hours-input span {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.weeks-selection {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.25rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.week-options {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+}
+
+.option input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    accent-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+}
+
+.weeks-container {
+    margin-top: 1.25rem;
+}
+
+.checkbox-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.week-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 0.75rem 0;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    height: 45px;
+}
+
+.week-item:hover {
+    border-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    background-color: #fff3e0;
+    /* สีส้มอ่อนสำหรับ hover */
+}
+
+.week-item.selected {
+    background-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    border-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    color: white;
+}
+
+.week-item input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.week-number {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.week-item.first-week {
+    border: 1px solid #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.submit-button {
+    background-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Noto Sans Thai', sans-serif;
+    box-shadow: 0 4px 6px rgba(245, 124, 0, 0.2);
+    /* ปรับ rgba ให้เข้ากับสีส้ม */
+}
+
+.submit-button:hover {
+    background-color: #ff9800;
+    /* เปลี่ยนเป็นสีส้มสว่าง */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(245, 124, 0, 0.25);
+    /* ปรับ rgba ให้เข้ากับสีส้ม */
+}
+
+.submit-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(245, 124, 0, 0.2);
+    /* ปรับ rgba ให้เข้ากับสีส้ม */
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    box-shadow: 0 0 0 0.25rem rgba(245, 124, 0, 0.25);
+    /* ปรับ rgba ให้เข้ากับสีส้ม */
+}
+
+.form-check-input:checked {
+    background-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+    border-color: #f57c00;
+    /* เปลี่ยนจาก #150B6E เป็นสีส้มเข้ม */
+}
+
+/* Media Queries คงไว้เหมือนเดิม */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .time-inputs {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .time-inputs .form-group {
+        width: 100%;
+    }
+
+    .checkbox-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hour-group-row {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .hour-group {
+        min-width: 100%;
+        flex-direction: row;
+    }
+
+    .main-container {
+        padding: 0 15px;
+        margin-top: 75px;
+    }
+
+    .form-container {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .form-section h3+.form-row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .time-group {
+        width: 100%;
+        padding: 0.75rem;
+    }
+
+    .checkbox-input {
+        min-width: 120px;
+    }
+
+    .hours-input input[type="number"] {
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .checkbox-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-section {
+        padding: 1rem;
+    }
+
+    .time-group {
+        padding: 1rem;
+    }
+
+    .time-inputs {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .time-inputs .form-group {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .form-container {
+        padding: 1rem;
+    }
+
+    .hour-group {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem;
+    }
+
+    .checkbox-input {
+        min-width: 100%;
+    }
+
+    .hours-input {
+        width: 100%;
+    }
+
+    .hours-input input[type="number"] {
+        width: 100%;
+        max-width: 100px;
+    }
+}
