@@ -13,40 +13,46 @@
     <style>
         /* สไตล์ของแถบด้านบน */
         .top-bar {
-            background-color: #150B6E;
-            /* สีของแถบด้านบน */
-            height: 60px;
-            /* ความสูงของแถบ */
-            width: 100%;
-            /* ครอบคลุมความกว้างทั้งหน้า */
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
+            display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: linear-gradient(90deg, #f57c00, #ff9800);
+	padding: 15px 30px;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+	transition: all 0.3s ease-in-out;
+    height: 7%;
         }
-       
 
         body {
 
             font-family: 'Noto Sans Thai', sans-serif;
+            background: linear-gradient(180deg, #f57c00, #ffffff);
+            padding: 0;
             margin: 0;
-            background-color: #f3f3f3;
-            padding-top: 80px; /* เพิ่ม padding เพื่อให้ห่างจาก top bar */
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
             
         }
         /* เพิ่มพื้นที่เผื่อด้านบนสำหรับเนื้อหา */
         .content {
+            margin-top: 3%;
             text-align: center;
-            color: #150B6E;
-            font-size: 18px;
+            color: #ffffff;
+            font-size: 40px;
+            text-shadow: black 0px 0px 3px;
+
         }
         /* จัดสไตล์ให้หน้า */
         .profile-container {
-            max-width: 500px;
-            margin: 40px auto;
+            width: 400px;
+            margin: 10px;
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -66,22 +72,26 @@
             color: #150b6e;
         }
         .edit-button {
-            display: block;
-            width: 8%;
-            padding: 10px;
-            text-align: center;
+            padding: 15px 25px;
+            background: linear-gradient(90deg, #f57c00, #ff9800);
             color: white;
-            background-color: #150b6e;
             border: none;
-            border-radius: 30px;
+            border-radius: 18px;
             cursor: pointer;
-            font-size: 18px;
-            text-decoration: none;
-            margin: 0 auto ;
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            background: linear-gradient(90deg, #ff9800, #f57c00);
+            width: 70px;
+            height: 40px;
+            margin: 20px auto; 
         }
         .edit-button:hover {
             background-color: #130b5e;
             transform: scale(1.05);
+            box-shadow: #000000 0px 0px 10px;
         }
         .back-icon img {
             width: 30px;
@@ -101,7 +111,7 @@
                 <img src="img/angle-left.png">
             </span>
         </a>
-        
+    </div>
     
 <?php include 'Personal.php'; 
 
@@ -116,7 +126,7 @@
 ?> 
 
     <div class="content">
-        <h1>ข้อมูลส่วนตัว</h1>
+        <h1>ข้อมูลส่วนตัว</h1></div>
 
     <div class="profile-container">
     <div class="profile-info">
@@ -164,7 +174,7 @@
     
     <!-- ปุ่มสำหรับแก้ไขข้อมูล -->
     <a href="Edit_profile.php" class="edit-button">แก้ไข</a>
-   
+</body>
 <script>
         // ฟังก์ชันสำหรับเปิด/ปิดเมนู
         function toggleMenu() {
@@ -183,5 +193,5 @@
         }
     </script>
 
-</body>
+
 </html>

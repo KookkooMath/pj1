@@ -39,24 +39,28 @@ $conn->close();
     <style>
         body {
             font-family: 'Noto Sans Thai', sans-serif;
-            background-color: #f3f3f3;
+            background: linear-gradient(180deg, #f57c00, #ffffff);
+            padding: 0;
+            margin: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            min-height: 100vh;
         }
         .top-bar {
-            background-color: #150B6E;
-            /* สีของแถบด้านบน */
-            height: 60px;
-            /* ความสูงของแถบ */
-            width: 100%;
-            /* ครอบคลุมความกว้างทั้งหน้า */
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
+            display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: linear-gradient(90deg, #f57c00, #ff9800);
+	padding: 15px 30px;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+	transition: all 0.3s ease-in-out;
+    height: 7%;
         }
 
         
@@ -89,22 +93,27 @@ $conn->close();
             outline: none;
         }
         .submit-button {
-            background-color: #150B6E;
+            padding: 15px 25px;
+            background: linear-gradient(90deg, #f57c00, #ff9800);
             color: white;
-            padding: 10px;
             border: none;
-            border-radius: 10px;
-            font-size: 16px;
+            border-radius: 18px;
             cursor: pointer;
-            text-align: center;
-            width: 150px ;
-            margin-top: 20px;
             font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            background: linear-gradient(90deg, #ff9800, #f57c00);
+            width: 130px;
+            height: 50px;
+            margin: 20px auto;  
         }
 
         .submit-button:hover {
             background-color: #130b5e;
             transform: scale(1.05);
+            box-shadow: #000000 0px 0px 10px;
         }
         
         .menu-icon img {
@@ -114,6 +123,7 @@ $conn->close();
             margin-left: 20px;
             margin-top: 15px;
         }
+
     </style>
 </head>
 <body>
