@@ -57,26 +57,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
     <style>
         .top-bar {
-            background-color: #150B6E;
-            /* สีของแถบด้านบน */
-            height: 60px;
-            /* ความสูงของแถบ */
-            width: 100%;
-            /* ครอบคลุมความกว้างทั้งหน้า */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(90deg, #f57c00, #ff9800);
+            padding: 15px 30px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
             position: fixed;
+            width: 100%;
             top: 0;
-            left: 0;
             z-index: 1000;
+            transition: all 0.3s ease-in-out;
+            height: 7%;
         }
 
         body {
             font-family: 'Noto Sans Thai', sans-serif;
+            background: linear-gradient(180deg, #f57c00, #ffffff);
+            padding: 0;
+            margin: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f2f5;
+            min-height: 100vh;
         }
         .form-container {
             background: white;
@@ -85,6 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             width: 400px;
             text-align: center;
+            border: 3px groove #000000;
         }
         .form-container h1 {
             margin-bottom: 20px;
@@ -92,12 +97,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         .form-group {
             margin-bottom: 15px;
             text-align: left;
+            width: 95%;
         }
         .form-group label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
             font-size: 16px;
+            margin: auto;
         }
         .form-group input {
             width: 100%;
@@ -126,6 +133,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             margin-left: 20px;
             margin-top: 15px;
             
+        }
+        input[type="submit"] {
+            padding: 15px 25px;
+            background: linear-gradient(90deg, #f57c00, #ff9800);
+            color: white;
+            border: none;
+            border-radius: 18px;
+            cursor: pointer;
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            background: linear-gradient(90deg, #ff9800, #f57c00);
+            width: 130px;
+            height: 50px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #130b5e;
+            transform: scale(1.05);
+            box-shadow: #000000 0px 0px 10px;
         }
     </style>
 </head>
